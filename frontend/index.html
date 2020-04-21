@@ -1,170 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Workshop</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workshop</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-</head>
+	<body>
+		<div class="jumbotron mb-0">
+			<h1 class="display-4">MercadoAcámica</h1>
+			<p class="lead">Compra y vende lo que ya no uses!</p>
+		</div>
+		<!--! iniciar sesion -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<form class="ml-auto">
+				<div class="input-group">
+					<label class="input-group-text" for="loginEmail "
+						>Email:</label
+					>
+					<input
+						type="text "
+						class="form-control px-1"
+						id="loginEmail "
+						placeholder="email@dominio.com"
+					/>
 
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="jumbotron jumbotron-fluid px-5">
-                    <h1 class="display-4">MercadoAcámica</h1>
-                    <p class="lead">Compra y vende lo que ya no uses!</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <!--! iniciar sesion -->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <form>
-                        <div class="input-group">
-                            <label class="input-group-text" for="loginEmail ">Email:</label>
-                            <input type="text " class="form-control px-1" id="loginEmail " placeholder="email@dominio.com" />
+					<label class="input-group-text" for="loginPassword"
+						>Password:</label
+					>
+					<input
+						class="form-control px-1"
+						type="password"
+						id="loginPassword"
+						placeholder="password"
+					/>
 
-                            <label class="input-group-text" for="loginPassword">Password:</label>
-                            <input class="form-control px-1" type="password" id="loginPassword" placeholder="password" />
+					<button class="btn btn-primary mx-2" type="submit">
+						Log In
+					</button>
+					<button class="btn btn-secondary mx-2" type="submit">
+						Sign Up
+					</button>
+				</div>
+			</form>
+		</nav>
+		<div class="container-fluid">
+			<!--! lista de product -->
+			<div class="row">
+				<h1 class="mx-auto my-5">Listado de productos</h1>
+				<div class="col-12">
+					<div class="listaProductos" id="listaProductos"></div>
+				</div>
+			</div>
 
-                            <button class="btn btn-primary mx-2" type="submit">Log In</button>
-                            <button class="btn btn-secondary mx-2" type="submit">Sign Up</button>
-                        </div>
-                    </form>
-                </nav>
-            </div>
-        </div>
+			<!-- cada productyo tien un boton de comprar -->
 
-        <!--! lista de product -->
-        <div class="row">
-            <h1 class="m-auto">Listado de productos</h1>
-            <div class="col-12 ">
-                <div class="listaProductos" id="listaProductos">
+			<!-- !misproductos  -->
+			<!-- lista con todos los producto que publique -->
+			<div class="row">
+				<h1 class="mx-auto my-5">Mis productos en la tienda</h1>
+				<section class="col-12 misProductos" id="misProductos">
+					<div class="item">
+						<div class="card">
+							<img
+								src="./img/pic2.jpg"
+								class="card-img-top"
+								alt="... "
+							/>
 
-                </div>
-            </div>
-        </div>
+							<div class="card-body">
+								<h5 class="card-title">Nombre del producto</h5>
+								<p class="card-text">
+									Some quick example text to build on the card
+									title and make up the bulk of the card's
+									content.
+								</p>
+								<a href="# " class="btn btn-primary">Estado</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
-        <!-- cada productyo tien un boton de comprar -->
+			<!-- agregar un producto -->
 
-        <!-- !misproductos  -->
-        <!-- lista con todos los producto que publique -->
-        <div class="row ">
-            <h1 class="mx-auto  my-5 ">Mis productos en la tienda</h1>
-            <section class="col-12 misProductos" id="misProductos">
-                <div class="item">
-                    <!-- <div class="card " > -->
-                    <div class="card ">
-                        <img src="./img/pic2.jpg" class="card-img-top " alt="... " />
+			<div class="row">
+				<h1 class="mx-auto my-5">Agregar Producto</h1>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<form
+						class="d-flex flex-row justify-content-center align-items-center card pt-7"
+					>
+						<div class="col-6 p-3">
+							<div class="form-group">
+								<label
+									class="control-label px-3"
+									for="ProdNombre "
+									>Nombre:
+								</label>
 
-                        <div class="card-body ">
-                            <h5 class="card-title ">Nombre del producto</h5>
-                            <p class="card-text ">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <a href="# " class="btn btn-primary ">Estado</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card ">
-                        <img src="./img/pic2.jpg" class="card-img-top " alt="... " />
+								<input
+									class="form-control"
+									type="text"
+									name="txtProdNombre"
+									id="ProdNombre"
+									placeholder="Nombre"
+									required
+									autocomplete="off "
+								/>
+							</div>
+							<div class="form-group">
+								<label class="control-label px-3" for="ProdDes"
+									>Descripcion:</label
+								>
 
-                        <div class="card-body ">
-                            <h5 class="card-title ">Nombre del producto</h5>
-                            <p class="card-text ">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <a href="# " class="btn btn-primary ">Estado</a>
-                        </div>
-                    </div>
+								<input
+									class="form-control"
+									type="text "
+									name="txtProdDes"
+									id="ProdDes"
+									placeholder="Descripcion"
+									required
+									autocomplete="off "
+								/>
+							</div>
+							<div class="form-group">
+								<label
+									class="control-label px-3"
+									for="ProdPrecio "
+									>Precio:
+								</label>
 
-                </div>
-                <div class="item">
-                    <div class="card ">
-                        <img src="./img/pic2.jpg" class="card-img-top " alt="... " />
+								<input
+									type="number "
+									class="form-control"
+									name="txtProdPrecio"
+									id="ProdPrecio"
+									placeholder="00.00"
+									autocomplete="off "
+								/>
+							</div>
+							<div class="form-group">
+								<label
+									for="ProdFoto "
+									class="control-label px-3"
+									>Foto:
+								</label>
 
-                        <div class="card-body ">
-                            <h5 class="card-title ">Nombre del producto</h5>
-                            <p class="card-text ">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <a href="# " class="btn btn-primary ">Estado</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="item">
-                    <div class="card ">
-                        <img src="./img/pic2.jpg" class="card-img-top " alt="... " />
-
-                        <div class="card-body ">
-                            <h5 class="card-title ">Nombre del producto</h5>
-                            <p class="card-text ">
-                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                            </p>
-                            <a href="# " class="btn btn-primary ">Estado</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- agregar un producto -->
-
-        <div class="row">
-            <h1 class="mx-auto my-5">Agregar Producto</h1>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <form class="d-flex flex-row justify-content-center align-items-center card pt-7">
-                    <div class="col-6 p-3">
-                        <div class="form-group">
-
-                            <label class="control-label px-3" for="ProdNombre ">Nombre: </label>
-
-                            <input class="form-control" type="text " name="txtProdNombre " id="ProdNombre " placeholder="Nombre " required autocomplete="off " />
-                        </div>
-                        <div class="form-group">
-
-                            <label class="control-label px-3" for=" ProdDes ">Descripcion:</label>
-
-                            <input class="form-control" type="text " name="txtProdDes " id="ProdDes " placeholder="Descripcion " required autocomplete="off " />
-                        </div>
-                        <div class="form-group">
-
-                            <label class="control-label px-3" for="ProdPrecio ">Precio: </label>
-
-                            <input type="number " class="form-control" name="txtProdPrecio " id="ProdPrecio " placeholder="00.00" autocomplete="off " />
-                        </div>
-                        <div class="form-group">
-
-                            <label for="ProdFoto " class="control-label px-3">Foto: </label>
-
-                            <input type="file" class="form-control" name="txtProdFoto " id="ProdFoto " />
-                        </div>
-                        <div class="form-group d-flex justify-content-end pt-3">
-                            <!-- <div class="row p-4 pl-5"> -->
-                            <button type="submit" class="btn btn-primary m-3 mx-2">
+								<input
+									type="file"
+									class="form-control"
+									name="txtProdFoto "
+									id="ProdFoto "
+								/>
+							</div>
+							<div
+								class="form-group d-flex justify-content-end pt-3"
+							>
+								<!-- <div class="row p-4 pl-5"> -->
+								<button
+									id="submit"
+									type="submit"
+									class="btn btn-primary m-3 mx-2"
+								>
 									Agregar
 								</button>
-                            <button type="reset" class="btn btn-secondary m-3 mx-2">
+								<button
+									type="reset"
+									class="btn btn-secondary m-3 mx-2"
+								>
 									Limpiar
 								</button>
-                            <!-- </div> -->
-                        </div>
-                    </div>
-                    <div class="col-6 align-self-center">
-                        <img class="img-fluid rounded" src="./img/pic3.jpg" alt="" />
-                    </div>
-                </form>
-            </div>
-        </div>
-        <script src="./js/index.js"></script>
-</body>
-
-</html>c
+								<!-- </div> -->
+							</div>
+						</div>
+						<div class="col-6 align-self-center">
+							<img
+								class="img-fluid rounded"
+								src="./img/pic3.jpg"
+								alt=""
+							/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script src="./js/index.js"></script>
+		</div>
+	</body>
+</html>

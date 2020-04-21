@@ -9,8 +9,6 @@
 
 -- Port: 3306
 
-
-
 CREATE DATABASE QuQlttFnSQ;
 USE QuQlttFnSQ;
 
